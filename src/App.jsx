@@ -6,7 +6,8 @@ AddMember;
 const App = () => {
   return (
     <div>
-      <AddMember />
+      <Node />
+      <Node isDummy={true} />
     </div>
   );
 };
