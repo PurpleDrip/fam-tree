@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { MdOutlineAddBox } from "react-icons/md";
 
 export const Node = (props) => {
+  const node = useRef(null);
+
+  const focusNode = () => {
+    if (node.current) {
+      node.current.scrollIntoView();
+    }
+  };
   const isDummy = true;
   return (
     <div
-      className={`h-[20rem] w-[18rem] ${
+      className={`h-[12rem] w-[10rem] ${
         props.color ? `bg-${props.color}-200` : "bg-green-200"
-      } rounded-3xl border-2 border-black`}
+      } rounded-3xl border-2 border-black md:h-[16rem] md:w-[14rem] focus:border-2 focus:border-red-600`}
+      ref={node}
+      onClick={focusNode}
+      tabIndex={0}
     >
       {isDummy ? (
         <div className="flex flex-col items-center justify-center h-full gap-8">
