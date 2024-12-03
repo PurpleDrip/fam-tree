@@ -1,13 +1,12 @@
 import React from "react";
 import { Node } from "./components/Node";
 import AddMember from "./modals/AddMember";
-AddMember;
+import Tree from "./components/Tree";
 
 const App = () => {
   return (
     <div>
-      <Node />
-      <Node isDummy={true} />
+      <Tree />
     </div>
   );
 };
