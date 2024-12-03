@@ -3,7 +3,7 @@ import { RiCloseCircleLine } from "react-icons/ri";
 
 const AddMember = ({ clickHandler }) => {
   return (
-    <div className="z-10 flex flex-col items-center justify-center gap-8 bg-[#1D232A] fixed border top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-8 rounded-xl border-accent">
+    <div className="z-10 flex flex-col items-center justify-center gap-8 bg-[#1D232A] fixed border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-8 rounded-3xl border-secondary">
       <h1 className="text-[1.3rem] sm:text-3xl text-secondary-content">
         Add Member
       </h1>
@@ -14,6 +14,11 @@ const AddMember = ({ clickHandler }) => {
         <input
           type="text"
           placeholder="First Name"
+          className="input input-bordered input-primary w-full"
+        />
+        <input
+          type="text"
+          placeholder="Last Name"
           className="input input-bordered input-primary w-full"
         />
         <input
